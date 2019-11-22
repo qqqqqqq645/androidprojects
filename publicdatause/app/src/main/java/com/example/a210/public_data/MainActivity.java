@@ -81,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
 
         String url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchFestival";
         url = addParams(url, params);
-
+        //http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchFestival?numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&listYN=Y&areaCode=1&eventStartDate=20191001&ServiceKey=WMoao2wlyH%2Fg8VDiX%2Bg4dmAimYFxy58FB7Qu%2FNbKl4wOGlNq%2FJGYs7dfK3x3FpKQK9zysPxgunNGdE4bsO15dA%3D%3D&return_type=json
+        //주소?파라미터=값&파라미터=값&Servicekey=서비스키&return_type=json
         aq.ajax(url, JSONObject.class, new AjaxCallback<JSONObject>() {
             @Override
             public void callback(String url, JSONObject resutl, AjaxStatus status) {
@@ -97,13 +98,19 @@ public class MainActivity extends AppCompatActivity {
                             JSONObject jobj = jar.optJSONObject(i);
 
                             ListViewItem item = new ListViewItem();
-                            item.setTitle(jobj.optString("title"));
+/*                            item.setTitle(jobj.optString("title"));
                             item.setAddress(jobj.optString("addr1"));
                             item.setFirstimage(jobj.optString("firstimage"));
                             item.setMapx(jobj.optDouble("mapx"));
                             item.setMapy(jobj.optDouble("mapy"));
                             item.setTel(jobj.optString("tel"));
-
+*/
+                            item.setTitle(jobj.optString("contentid"));
+                            item.setAddress(jobj.optString("createdtime"));
+                            item.setFirstimage(jobj.optString("firstimage"));
+                            item.setMapx(jobj.optDouble("mapx"));
+                            item.setMapy(jobj.optDouble("mapy"));
+                            item.setTel(jobj.optString("tel"));
                             arItem.add(item);
                         }
 

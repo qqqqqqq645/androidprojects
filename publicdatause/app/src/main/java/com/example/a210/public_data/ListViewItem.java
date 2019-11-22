@@ -1,9 +1,5 @@
 package com.example.a210.public_data;
 
-import android.graphics.drawable.Drawable;
-
-import java.io.Serializable;
-
 public class ListViewItem {
 
     private String firstimage;
