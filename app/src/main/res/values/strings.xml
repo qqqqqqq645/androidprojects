@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">고객관리</string>
+    <String name = "hello_world">Hello world!</String>
+
+    <String name = "actino_settings1">홈</String>
+    <String name = "actino_settings2">고객등록</String>
+    <String name = "actino_settings3">고객현황</String>
+
+    <String name = "name">성명</String>
+    <String name = "gender">성별</String>
+    <String name = "phone">휴대폰</String>
+    <String name = "location">지역</String>
+
+    <String name = "menu1">고객등록</String>
+    <String name = "menu2">고객현황</String>
+
+
+</resources>
